@@ -17,5 +17,23 @@ public class Main {
 
         memento.desfazer();                  // volta para "PENDENTE"
         System.out.println("Status atual: " + memento.getStatus());
+
+         // --- BUILDER ---
+        System.out.println("\n=== BUILDER ===");
+        PedidoBuilder pedido = new PedidoBuilder.Builder()
+           .pao("Brioche")
+           .carne("Moída")
+           .queijo("Cheddar")
+           .bacon(true)
+           .alface(true)
+           .tomate(false)
+           .molho("Barbecue")
+           .build();  // MONTA E DEVOLVE O OBJETO FINAL
+
+
+           pedido.exibirPedido();
+
+
+
     }
 }
